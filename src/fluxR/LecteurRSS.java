@@ -19,13 +19,13 @@ import org.xml.sax.SAXException;
 public class LecteurRSS 
 {
 
-    //Parser avec URL du flux RSS avec parse(@param feedUrl)
-    public void parse(String envoiurl) 
+    //Parser avec URL du flux RSS avec parse(@param envoiUrl)
+    public void parse(String envoiUrl) 
     {
         try 
         {
             DocumentBuilder document = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            URL url = new URL(envoiurl);
+            URL url = new URL(envoiUrl);
             Document doc = document.parse(url.openStream());
             NodeList nodes = null;
             Element element = null;
